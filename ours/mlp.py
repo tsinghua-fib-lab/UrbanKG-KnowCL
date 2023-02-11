@@ -122,6 +122,7 @@ def train_eval(args):
         if args.dr:
             scheduler.step()
         with torch.no_grad():
+            model.eval()
             predicted = model(x_train).cpu().data.numpy()
             train_r2 = r2_score(list(y_train.cpu().data.numpy()), list(predicted))
 
