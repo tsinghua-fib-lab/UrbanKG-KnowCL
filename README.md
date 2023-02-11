@@ -18,7 +18,7 @@ After downloading the data, copy "zl15_224" into "./data/satellite_image/" folde
 
 To reproduce the population prediction results, execute the following commands:
 
-    CUDA_VISIBLE_DEVICES=0 python mlp.py --indicator pop --dataset new_york --model_name Pair_CLIP_SI --KnowCLgcn 2 --KnowCLlr 0.0003 --KnowCLbatchsize 128 --KnowCLepoch 100 --lr 0.001  --drop_out 0.5 --wd 0.1
+    CUDA_VISIBLE_DEVICES=0 python mlp.py --indicator pop --dataset new_york --model_name Pair_CLIP_SI --KnowCLgcn 2 --KnowCLlr 0.0003 --KnowCLbatchsize 128 --KnowCLepoch 100 --lr 0.001  --drop_out 0.3 --wd 1.0
     CUDA_VISIBLE_DEVICES=0 python mlp.py --indicator pop --dataset new_york --model_name Pair_CLIP_SV --KnowCLgcn 3 --KnowCLlr 0.0003 --KnowCLbatchsize 16 --KnowCLepoch 100 --lr 0.005  --drop_out 0.1 --wd 0.0
 
 To reproduce the education prediction results, execute the following commands:
